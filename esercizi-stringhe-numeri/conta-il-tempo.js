@@ -12,3 +12,10 @@
 
   http://www.imparareaprogrammare.it
 */
+const ora = 3600     // ora in secondi
+const minuto = 60    // minuto in secondi
+var tempo = 12560
+var ore = Math.trunc(tempo/ora)
+var minuti = Math.trunc(tempo%ora/minuto)
+var secondi = (tempo-(ore*ora+minuti*minuto))
+console.log(`${ore} ore, ${minuti} minuti e ${secondi} secondi`);

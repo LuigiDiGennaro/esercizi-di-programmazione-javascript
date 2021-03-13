@@ -11,3 +11,9 @@
 
   http://www.imparareaprogrammare.it
 */
+var annCorr = 2018
+var annoNascita = 1991
+var vita = 100
+var età = annCorr-annoNascita
+var differenza = vita - età
+console.log(`età = ${età}, anni mancanti = ${differenza}`);

@@ -17,3 +17,9 @@
 
   http://www.imparareaprogrammare.it
 */
+var ngatti = 44
+var xfila = 6
+var nfile = Math.ceil(ngatti/xfila)
+
+var resto = (xfila * nfile) - ngatti
+console.log(`${ngatti} gatti in fila per ${xfila} si uniscono copmatti in ${nfile}. Nell'ultima fila rimasero ${resto} gatti soli soli. miao`)
