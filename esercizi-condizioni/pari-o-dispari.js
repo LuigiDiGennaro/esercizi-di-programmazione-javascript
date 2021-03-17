@@ -10,8 +10,16 @@
     Output: 0
 
   Consigli:
-  Per capire se un numero è pari o dispari puoi usare un operatore, ma quale? :) 
+  Per capire se un numero è pari o dispari puoi usare un operatore, ma quale? :)
   (Se non ti ricordi riguarda la lezione "Come dichiarare e definire le variabili e i tipi di dato" oppure "Il tipo Numero e gli operatori aritmetici")
 
   http://www.imparareaprogrammare.it
 */
+
+const numero = 788;
+
+if (numero %2 == 1) {
+  console.log('dispari');
+} else {
+  console.log('pari');
+}

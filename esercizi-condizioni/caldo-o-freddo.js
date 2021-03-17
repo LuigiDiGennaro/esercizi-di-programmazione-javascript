@@ -9,3 +9,35 @@
 
   http://www.imparareaprogrammare.it
 */
+
+var a = 10;
+var b = -2;
+var c = 31;
+var d = 22;
+var e = 15;
+var f = -6;
+var g = 7;
+var caldo;
+var freddo;
+
+// caldo
+if (a > b) caldo = a;
+else caldo = b;
+
+if (c>caldo) caldo = c;
+if (d>caldo) caldo = d;
+if (e>caldo) caldo = e;
+if (f>caldo) caldo = f;
+if (g>caldo) caldo = g;
+
+
+// freddo
+if (a < b) freddo = a;
+else freddo = b;
+
+if (c < freddo) freddo = c;
+if (d < freddo) freddo = d;
+if (e < freddo) freddo = e;
+if (f < freddo) freddo = f;
+if (g < freddo) freddo = g;
+console.log(`giornata più calda: ${caldo}, giornata più fredda: ${freddo}`);

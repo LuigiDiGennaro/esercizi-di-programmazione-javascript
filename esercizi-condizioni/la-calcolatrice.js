@@ -28,3 +28,47 @@
 
   http://www.imparareaprogrammare.it
 */
+var a = 5;
+var b = 6;
+var operazione = 8;
+var somma = a + b; //1
+var sottrazione = a - b; //2
+var moltiplicazione = a * b; //3
+var divisione = a / b; //4
+var modulo = (Math.round(a) % Math.round(b)); //5
+var potenza = (Math.pow(a, b)); //6
+var media = somma / 2 //7
+
+switch (operazione) {
+  case 1:
+    console.log(`input: a = ${a}, b = ${b}, operazione = somma`);
+    console.log(`output = ${somma}`);
+    break;
+  case 2:
+    console.log(`input: a = ${a}, b = ${b}, operazione = sottrazione`);
+    console.log(`output = ${sottrazione}`);
+    break;
+  case 3:
+    console.log(`input: a = ${a}, b = ${b}, operazione = moltiplicazione`);
+    console.log(`output = ${moltiplicazione}`);
+    break;
+  case 4:
+    console.log(`input: a = ${a}, b = ${b}, operazione = divisione`);
+    console.log(`output = ${divisione}`);
+    break;
+  case 5:
+    console.log(`input: a = ${a}, b = ${b}, operazione = modulo`);
+    console.log(`output = ${modulo}`);
+    break;
+  case 6:
+    console.log(`input: a = ${a}, b = ${b}, operazione = potenza`);
+    console.log(`output = ${potenza}`);
+    break;
+  case 7:
+    console.log(`input: a = ${a}, b = ${b}, operazione = media`);
+    console.log(`output = ${media}`);
+    break;
+  default:
+    console.log('ERROR');
+
+}

@@ -11,3 +11,13 @@
 
   http://www.imparareaprogrammare.it
 */
+const cifra = '9';
+if (cifra.length > 1 && cifra.length <= 4) {
+  console.log(`input = ${cifra}`);
+  console.log(`output = ${cifra.length} cifre`);
+
+} else {
+  console.log(`input = ${cifra}`)
+  console.log(`output = ${cifra.length} cifra`)
+
+}
