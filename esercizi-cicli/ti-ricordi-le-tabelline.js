@@ -8,3 +8,14 @@
 
   http://www.imparareaprogrammare.it
 */
+
+var output = '';
+var max = 10;
+var min = 0;
+var input = 7;
+
+for (var i = min; i <= max; i++) {
+  output +=  ' ' + (i*input);
+}
+console.log(`Input: ${input}`);
+console.log(`Output: ${output}`);
