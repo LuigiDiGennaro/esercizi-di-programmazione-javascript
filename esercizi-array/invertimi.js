@@ -15,3 +15,22 @@
 
   http://www.imparareaprogrammare.it
 */
+var input = 6;
+if (input < 1) {
+  console.log("inserisci un numero positivo e diverso da 0");
+
+} else {
+  var array = new Array(input);
+  Array.prototype.move = function(from, to) {
+    this.splice(to, 0, this.splice(from, 1)[0]);
+    return this;
+  };
+  for (var i = 0; i < input; i++) {
+    array[i] = Math.ceil(Math.random() * 10)
+  }
+  console.log(array);
+  for (var i = 0; i < input - 1; i++) {
+    array.move(i + 1, 0);
+  }
+  console.log(array);
+}
