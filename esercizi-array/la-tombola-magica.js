@@ -19,13 +19,13 @@
 
   http://www.imparareaprogrammare.it
 */
-const input = [73, 4, 83, 76, 5, 58, 38, 64, 69, 23]; // inserisci 10 numeri diversi da 1 a 90
+const input = [73, 4, 83, 76, 5, 58, 38, 64, 69, 6];
 const verifica = input.every(function controllo(e, i, a) {
-  return a.indexOf(e) === i
+  return a.indexOf(e) === i && e<=90 === true
 });
 
 if (verifica === false || input.length < 10 && verifica !== false) {
-  console.log("inserisci dieci numeri diversi");
+  console.log("Inserisci dieci numeri compresi tra 1 e 90 senza ripetizioni");
 } else {
   const arr = [];
   for (var i = 0; i < 10; i++) {
