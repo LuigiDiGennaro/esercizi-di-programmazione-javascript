@@ -19,3 +19,65 @@
 
   http://www.imparareaprogrammare.it
 */
+const input = [73, 4, 83, 76, 5, 58, 38, 64, 69, 23]; // inserisci 10 numeri diversi da 1 a 90
+const verifica = input.every(function controllo(e, i, a) {
+  return a.indexOf(e) === i
+});
+
+if (verifica === false || input.length < 10 && verifica !== false) {
+  console.log("inserisci dieci numeri diversi");
+} else {
+  const arr = [];
+  for (var i = 0; i < 10; i++) {
+    arr[i] = Math.floor(Math.random() * (90 - 1)) + 1
+  }
+  console.log(input);
+
+  const filtered = arr.filter(function togli_duplicati(e, i, a) {
+    return a.indexOf(e) !== i
+  })
+  //console.log(filtered);
+  const filtered2 = arr.filter(function mostra_duplicati(e, i, a) {
+    return a.indexOf(e) === i
+  })
+  //console.log(filtered2);
+  const controllo = filtered2.every(function controllo(e, i, a) {
+    return a.indexOf(e) === i
+  });
+
+  if (filtered.length === 0) {
+    var schedaRandom = arr;
+  } else {
+    while (filtered2.length < 10 && controllo !== false) {
+      var x = Math.ceil(Math.random() * (90 - 1)) + 1
+      filtered2.push(x);
+    }
+    schedaRandom = filtered2
+  }
+  console.log(schedaRandom);
+  var unione = input.concat(schedaRandom);
+  //console.log(unione);
+  const risultato = unione.filter(function duplicati(e, i, a) {
+    return a.indexOf(e) !== i
+  })
+  //console.log(risultato);
+  switch (risultato.length) {
+    case 0 || 1:
+      console.log("sorry");
+      break;
+    case 2:
+      console.log("AMBO");
+      break;
+    case 3:
+      console.log("TERNO");
+      break;
+    case 4:
+      console.log("QUATERNA");
+      break;
+    case 10:
+      console.log("TOMBOLA");
+      break;
+    default:
+      console.log("CINQUINA");
+  }
+}
