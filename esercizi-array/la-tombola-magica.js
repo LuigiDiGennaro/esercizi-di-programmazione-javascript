@@ -23,7 +23,6 @@ const input = [73, 4, 83, 76, 5, 58, 38, 64, 69, 6];
 const verifica = input.every(function controllo(e, i, a) {
   return a.indexOf(e) === i && e<=90 === true
 });
-
 if (verifica === false || input.length < 10 && verifica !== false) {
   console.log("Inserisci dieci numeri compresi tra 1 e 90 senza ripetizioni");
 } else {
