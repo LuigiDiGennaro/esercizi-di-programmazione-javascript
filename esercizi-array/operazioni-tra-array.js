@@ -19,3 +19,36 @@
 
   http://www.imparareaprogrammare.it
 */
+Array.prototype.shuffle = function() {
+  var i = this.length,
+    j, temp;
+  while (--i > 0) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this[j];
+    this[j] = this[i];
+    this[i] = temp;
+  }
+  return this;
+}
+var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const a = arr1.shuffle();
+const b = arr2.shuffle();
+
+var c = [];
+for (var i = 0; i < a.length; i++) {
+  c[i] = a[i] + b[i]
+}
+console.log(`operazione = "addizione"\nInput: a = [${a}],\nInput: b = [${b}],\nOutput: c = [${c}]\n`);
+for (var i = 0; i < a.length; i++) {
+  c[i] = a[i] - b[i]
+}
+console.log(`operazione = "sottrazione"\nInput: a = [${a}],\nInput: b = [${b}],\nOutput: c = [${c}]\n`);
+for (var i = 0; i < a.length; i++) {
+  c[i] = a[i] * b[i]
+}
+console.log(`operazione = "moltiplicazione"\nInput: a = [${a}],\nInput: b = [${b}],\nOutput: c = [${c}]\n`);
+for (var i = 0; i < a.length; i++) {
+  c[i] = a[i] / b[i]
+}
+console.log(`operazione = "divisione"\nInput: a = [${a}],\nInput: b = [${b}],\nOutput: c = [${c}]\n`);
