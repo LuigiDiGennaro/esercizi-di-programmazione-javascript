@@ -48,7 +48,7 @@ if (verifica === false || input.length < 10 && verifica !== false) {
     var schedaRandom = arr;
   } else {
     while (filtered2.length < 10 && controllo !== false) {
-      var x = Math.ceil(Math.random() * (90 - 1)) + 1
+      var x = Math.floor(Math.random() * (90 - 1)) + 1
       filtered2.push(x);
     }
     schedaRandom = filtered2
