@@ -12,3 +12,52 @@
 
   http://www.imparareaprogrammare.it
 */
+const a = [];
+const b = [];
+
+for (var i = 0; i < 50; i++) {
+  a.push(i + 1)
+  b.push(i + 1)
+}
+var array = a.concat(b);
+
+Array.prototype.shuffle = function() {
+  var i = this.length,
+    j, temp;
+  while (--i > 0) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = this[j];
+    this[j] = this[i];
+    this[i] = temp;
+  }
+  return this;
+}
+array = array.shuffle();
+
+console.log(array);
+
+var input = window.prompt('inserisci un numero');
+array.forEach((item, i) => {
+  if (item % input == 0)
+    array[i] = 0
+  return array;
+});
+
+function tuttiZero(e, i, a) {
+  return e === 0
+}
+
+console.log(array);
+
+while (array.every(tuttiZero) !== true) {
+  input = window.prompt('inserisci un altro numero');
+  array.forEach((item, i) => {
+    if (item % input == 0)
+      array[i] = 0
+    return array
+  });
+  console.log(array);
+}
+if (array.every(tuttiZero) === true) {
+  document.write("il gioco è finito")
+}
