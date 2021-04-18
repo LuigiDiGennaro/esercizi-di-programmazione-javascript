@@ -15,3 +15,27 @@
 
   http://www.imparareaprogrammare.it
 */
+const array = [3, 7, -2, 5, -8, 1, 2, 5, 6, -4]
+const array_2 = [3, 7, -2, 5, -8, 1, 2, 5, 6, -4]
+console.log(array);
+// crescente
+for (let i = 0; i < array.length; i++)
+    for (let j = 0; j < array.length - i; j++)
+        if (array[j] > array[j + 1]) {
+            const temp = array[j]
+            array[j] = array[j + 1]
+            array[j + 1] = temp
+        }
+
+console.log(array);
+
+// decrescente
+for (let i = 0; i < array_2.length; i++)
+    for (let j = 0; j < array_2.length - i; j++)
+        if (array_2[j] < array_2[j + 1]) {
+            const temp = array_2[j]
+            array_2[j] = array_2[j + 1]
+            array_2[j + 1] = temp
+        }
+
+console.log(array_2);
